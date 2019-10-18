@@ -1,0 +1,11 @@
+<configuration scan="true" scanPeriod="15 seconds">
+  <!-- <property name="CONSOLE_LOG_PATTERN" value="%d %cyan([%8t]) %magenta([%X{userId}]) %clr(%-5p) %blue(%logger{36}) - %black(%msg%n)"/> -->
+  <!-- <property name="FILE_LOG_PATTERN" value="%d [%8t] [%X{userId}] %-5level %logger{36} - %msg%n"/> -->
+  <property name="LOG_FILE" value="${catalina.home}/logs/pf4j-test.log"/>
+
+  <!-- Default Spring Boot configuration -->
+  <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+  <!-- Custom configuration -->
+  <include file="${catalina.home}/logback.xml"/>
+</configuration>
